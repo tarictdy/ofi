@@ -1,47 +1,213 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Authentifié - Office30</title>
-    <link rel="stylesheet" href="office30-theme.css" />
+    <style>
+      button {
+        appearance: auto;
+        text-rendering: auto;
+        color: buttontext;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        cursor: default;
+        box-sizing: border-box;
+        background-color: buttonface;
+        margin: 0;
+        padding-block: 1px;
+        padding-inline: 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
+      }
+
+      #app-host,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      .interrupt-content ::-webkit-scrollbar-thumb {
+        border: 4px solid transparent;
+        background-clip: padding-box;
+        border-radius: 9999px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .css-97 {
+        width: 100%;
+        max-width: 440px;
+        min-height: 640px;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .css-121 {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .css-99 {
+        padding: 28px 28px 18px;
+      }
+
+      .css-100 {
+        margin-bottom: 20px;
+      }
+
+      .css-101 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-103 {
+        color: #444;
+        font-size: 14px;
+      }
+
+      .css-105 {
+        font-size: 26px;
+        line-height: 1.25;
+        font-weight: 600;
+        color: #1b1b1b;
+      }
+
+      .css-106 {
+        display: flex;
+        justify-content: center;
+        padding: 8px 0 4px;
+      }
+
+      .css-107 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-108 {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .css-109 {
+        color: #1b1b1b;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .css-110 {
+        color: #555;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      #StickyFooter.css-112 {
+        margin-top: auto;
+        padding: 14px 20px 18px;
+        border-top: 1px solid #efefef;
+        display: flex;
+        justify-content: flex-end;
+        background: #fff;
+      }
+
+      .root-122 {
+        min-width: 110px;
+        height: 32px;
+        border: 1px solid #0067b8;
+        border-radius: 2px;
+        background: #0067b8;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 14px;
+      }
+
+      .root-122:hover {
+        background: #005a9e;
+        border-color: #005a9e;
+      }
+
+      .label-117 {
+        color: inherit;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 - Authentification confirmée</span>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ActivityControl-module__activity-item__j7T17">
-          <span class="ActivityControl-module__activity-icon__Og235 ActivityControl-module__activity-icon--small__vMkSN">✓</span>
-          <div class="ActivityControl-module__activity-content__ealEs">
-            <p class="ActivityControl-module__activity-text__qEjee">Vos informations ont été vérifiées avec succès.</p>
-            <p class="ActivityControl-module__activity-timestamp__YmN5s">Vous pouvez poursuivre l'accès à votre recommandé.</p>
+    <div id="app-host">
+      <div class="ms-Stack interrupt-content css-97">
+        <div id="scrollDiv" class="ms-Stack css-121">
+          <div id="interruptContainer" class="ms-StackItem css-99">
+            <div></div>
+            <div class="ms-Stack css-100">
+              <img
+                src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+                alt="Microsoft"
+                style="height: 24px; width: 112.55px"
+              />
+            </div>
+            <div class="ms-Stack css-101">
+              <div class="ms-StackItem css-102"><span class="css-103">Office30</span></div>
+              <div class="ms-StackItem css-104"><span role="heading" aria-level="1" class="css-105">Authentification confirmée</span></div>
+              <div class="ms-Stack css-106">
+                <img
+                  src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/newProductLogoLightMode-512x512.png"
+                  alt="Illustration de confirmation"
+                  style="align-self: center; height: 128px; width: 128px"
+                />
+              </div>
+              <div class="ms-Stack css-107">
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Vos informations ont été vérifiées avec succès.</span>
+                  <span class="css-110">Vous pouvez maintenant poursuivre l'accès à votre recommandé électronique.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="StickyFooter" class="ms-Stack css-112">
+            <button id="continue-button" type="button" class="ms-Button ms-Button--primary root-122" data-is-focusable="true">
+              <span class="ms-Button-flexContainer flexContainer-114" data-automationid="splitbuttonprimary">
+                <span class="ms-Button-textContainer textContainer-115"><span class="ms-Button-label label-117" id="id__0">Continuer</span></span>
+              </span>
+            </button>
           </div>
         </div>
-
-        <div class="SearchSuggestionButton-module__search-compound-button-container__Hin41">
-          <a class="SearchSuggestionButton-module__search-compound-button-container__link__x8U5c" href="webmail.html">
-            <span class="SearchSuggestionButton-module__search-icon__container__xOAsW">
-              <span class="SearchSuggestionButton-module__search-icon__fFnFE">→</span>
-            </span>
-            <span class="SearchSuggestionButton-module__search-compound-button-container__text__vx4sq">Continuer</span>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 est une filiale de Docaposte</span>
-        </div>
       </div>
-    </footer>
+    </div>
+
+    <script>
+      document.getElementById('continue-button').addEventListener('click', () => {
+        window.location.href = 'webmail.html';
+      });
+    </script>
   </body>
 </html>
